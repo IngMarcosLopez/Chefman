@@ -185,7 +185,7 @@ define(["../../plugin/bsworks/bsworksUtil-1.0.min", "./bsw_mes_putdata_util", "N
                                                     inventoryNumber: "",
                                                     quantity: receiptItem.quantity,
                                                     expirationDate: "",
-                                                    //status: "1" 仅库存状态开启后使用
+                                                    //status: "1" //仅库存状态开启后使用
                                                 }
                                             ]
                                         },
@@ -200,7 +200,7 @@ define(["../../plugin/bsworks/bsworksUtil-1.0.min", "./bsw_mes_putdata_util", "N
                                             const componentsQuantity = (parseFloat(woitem.quantityuom) * parseFloat(quantityRate)).toFixed(8);
                                             const components = {
                                                 quantity: componentsQuantity,
-                                                inventoryAssignments: []
+                                                // inventoryAssignments: []
                                                 /** 仅库存状态开启后使用
                                                 inventoryAssignments: [{
                                                     inventoryNumber: "",
@@ -209,6 +209,12 @@ define(["../../plugin/bsworks/bsworksUtil-1.0.min", "./bsw_mes_putdata_util", "N
                                                     expirationDate: "",
                                                     status: "1" 
                                                 }] **/
+                                            }
+                                            if (componentsQuantity > 0) {
+                                                components.inventoryAssignments = [{
+                                                    quantity: componentsQuantity,
+                                                    binNumber: woitem.binnumber
+                                                }]
                                             }
                                             assemblybuildinventorydata.components[woitem.line] = components;
                                         });

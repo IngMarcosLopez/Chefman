@@ -34,6 +34,8 @@ define(["../../plugin/bsworks/bsworksUtil-1.0.min", "../Util/restletUtil"], (bsw
             { id: "salesdescription", label: "销售说明" },
             { id: "weight", label: "货品重量" },
             { id: "weightunit", label: "货品重量单位代码", search: { type: "valueText" } },
+            { id: "cost", label: "采购价格" },
+            // { id: "fxcost", label: "采购价格（外币）" },
             { id: "created", alias: "createddate", label: "创建时间" },
             { id: "modified", alias: "modifieddate", label: "修改时间" },
             { id: "custitem_bsw_local_sync_status", search: { type: "none" }, label: "本地同步状态", filter: { values: "F" } }
@@ -108,6 +110,7 @@ define(["../../plugin/bsworks/bsworksUtil-1.0.min", "../Util/restletUtil"], (bsw
             { id: "bomquantity", label: "BOM数量", join: 'component' },
             { id: "quantity", label: "数量", join: 'component' },
             { id: "units", label: "单位", search: { type: "valueText" }, join: 'component' },
+            { id: "custrecord_bomrev_price", label: "单价", join: 'component' }
         ];
         let dataList = bsworks.search.getSearchAllResultDataList("bomrevision", searchFields, 1, 1000);
         // dataList = restletUtil.handleDataList(dataList, "base_item_bomrevision");
