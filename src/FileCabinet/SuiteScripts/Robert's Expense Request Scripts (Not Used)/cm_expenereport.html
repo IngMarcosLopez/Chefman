@@ -1,0 +1,101 @@
+<head>
+
+    <macrolist>
+        <macro id="nlheader">
+            <table class="header" style="width: 100%;">
+                <tr>
+                    <td rowspan="3" style="height: 112px;"><img src="" style="float: left; width: 150px;" />
+                    </td>
+                    <td align="right">
+                        <h1 style="font-size:20px">Expense Request Form</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right" style="height: 35px;">&nbsp;</td>
+                </tr>
+            </table>
+        </macro>
+
+    </macrolist>
+
+</head>
+
+<body header="nlheader" header-height="10%" footer="nlfooter" footer-height="20pt" padding="0.5in 0.5in 0.5in 0.5in"
+    size="Letter">
+    <br /><br />
+
+    <table class="header" style="width: 100%;">
+        <tr>
+            <td align="left">
+                <h1 style="font-size:15px">Requested by:</h1>
+            </td>
+            <td align="right">
+                <h1 style="font-size:15px">Request Date:</h1>
+            </td>
+        </tr>
+    </table>
+
+    <table class="header" style="width: 100%; padding-top:2px">
+        <tr>
+            <td align="left">
+                <input type="text" placeholder="mm/dd/yyyy"
+                    data-parsley-pattern="(0{0,1}\d|1[0-2])/([12]\d|0{0,1}\d|3[01])/(\d{4})"
+                    data-parsley-error-message="Please enter a valid date of the form MM/DD/YYYY"
+                    data-parsley-trigger="change" required>
+
+            </td>
+
+            <td align="right">
+                <input style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;" maxlength="250"
+                    type="text" placeholder="">
+            </td>
+        </tr>
+    </table>
+
+    <h1 style="font-size:15px;  ">Vendor Name/Expense:</h1>
+    <div>
+        <input
+            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; width: 100%;  margin-top:2px;"
+            maxlength="250" type="text" placeholder="">
+
+
+    </div>
+
+    <h1 style="font-size:15px; ">What is the Expense?</h1>
+    <div>
+        <input
+            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; width: 100%;  margin-top:2px;"
+            maxlength="250" type="text" placeholder="">
+
+    </div>
+
+    <h1 style="font-size:15px;  ">Department Requesting Expense:</h1>
+    <div>
+        <input
+            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; width: 100%;  margin-top:2px;"
+            maxlength="250" type="text" placeholder="">
+
+    </div>
+
+
+    <h1 style="font-size:15px; ">Describe Why Expense is Needed:</h1>
+    <div>
+        <input
+            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; width: 100%;  margin-top:2px;"
+            maxlength="250" type="text" placeholder="">
+
+    </div>
+
+
+    <h1 style="font-size:15px; ">List Competing Quotes</h1>
+    <div>
+        <input
+            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; width: 100%;  margin-top:2px;"
+            maxlength="250" type="text" placeholder="">
+
+    </div>
+
+</body>

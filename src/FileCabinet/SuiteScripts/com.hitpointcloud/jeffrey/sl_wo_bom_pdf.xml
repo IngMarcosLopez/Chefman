@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf lang="zh_CN">
+    <head>
+	<!--
+	<link name="NotoSans" type="font" subtype="truetype" 
+	src="${data.noteSansRegular}" src-bold="${data.noteSansBold}" src-italic="${data.noteSansItalic}" src-bolditalic="${data.noteSansBoldItalic}" bytes="2" />
+	
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" 
+			src="${data.notoSansCJKscRegular}" src-bold="${data.notoSansCJKscBold}" bytes="2" />
+	</#if>
+	<style type = "text/css">
+	*{
+		font-family:NotoSans,NotoSansCJKsc,sans-serif;
+		<#if .locale == "zh_CN">
+			font-family:NotoSans,NotoSansCJKsc,sans-serif;
+		<#else>font-family:NotoSans,NotoSansCJKsc,sans-serif;
+		</#if>
+	}
+	
+	</style>
+	-->
+    </head>
+<body padding="0.5in 1in 0.5in 0.5in" size="A4-LANDSCAPE">
+	
+	
+	<table width="970px" style = "margin-top:5px;">
+            <tr height="30px">
+                <td align="center" style="margin-left:-110px"><span align="center" style = "font-weight:900;font-size: 20px;font-weight: bold;margin-left:65px;">工单领料单</span></td>
+            </tr>
+        </table>
+	
+	
+	
+	<table width="900px" style="font-size:11px;margin-top:5px;">
+            <tr height="15px">
+                <td width="60%">
+				<table width="450px" style="font-size:11px;margin-left:-4px">
+						<tr>
+							<td>工单号：&nbsp;&nbsp;<span>${data.wo_num}</span></td>
+						</tr>
+						
+						
+					
+				</table>
+				
+				</td>
+                <td width="40%">
+					<table width="425px" style="font-size:11px;">
+						<tr>
+							<td>调至仓库：&nbsp;&nbsp;<span>${data.location}</span></td>
+						</tr>
+					
+					</table>
+				
+				</td>
+				
+				
+            </tr>
+			
+        </table>
+	
+	<table width="900px" style="font-size:11px;margin-top:5px;border-top:2px;border-left:1px;border-right:1px;border-bottom:2px;">
+		<tr height="10px">
+			<td width="9%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">货品编码</td>
+			<td width="20%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">货品名称</td>
+			<td width="23%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">规格型号</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">需求数量</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">现有库存</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">待调发数量</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;">实际调发数量</td>
+		</tr>
+		<#if data.item?has_content>
+		<#list data.item as item>
+		<tr height="10px">
+			<td width="9%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">${item.itemCode}</td>
+			<td width="20%" align="left" valign="middle" style="border-bottom:1px;border-right:1px">${item.itemName}</td>
+			<td width="23%" align="left" valign="middle" style="border-bottom:1px;border-right:1px">${item.itemType}</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">${item.needQty}</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">${item.handQty}</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;border-right:1px">${item.waitQty}</td>
+			<td width="12%" align="center" valign="middle" style="border-bottom:1px;">${item.realQty}</td>
+		</tr>
+	
+			 </#list>
+	</#if>
+	
+	</table>
+	<table width="900px" style="font-size:11px;margin-top:5px;">
+            <tr height="15px">
+                <td width="60%">
+				<table width="450px" style="font-size:11px;margin-left:-4px">
+						<tr>
+							<td>开单人：<span></span></td>
+						</tr>
+					
+				</table>
+				</td>
+				<td width="60%">
+				<table width="450px" style="font-size:11px;margin-left:-4px">
+						<tr>
+							<td>经办人：<span></span></td>
+						</tr>
+					
+				</table>
+				</td>
+				<td width="60%">
+				<table width="450px" style="font-size:11px;margin-left:-4px">
+						<tr>
+							<td>批准人：<span></span></td>
+						</tr>
+					
+				</table>
+				</td>
+				<td width="60%">
+				<table width="450px" style="font-size:11px;margin-left:-4px">
+						<tr>
+							<td>打印日期：<span>${data.nowTime}</span></td>
+						</tr>
+					
+				</table>
+				</td>
+            </tr>
+			
+        </table>
+	
+</body>
+</pdf>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

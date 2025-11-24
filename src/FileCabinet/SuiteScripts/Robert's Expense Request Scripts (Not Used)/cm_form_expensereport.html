@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .content {
+        max-width: 960px;
+        margin: auto;
+    }
+</style>
+
+<head>
+    <table class="header" style="width: 100%;">
+        <tr>
+            <td rowspan="3" style="height: 112px;"><img
+                    src="https://7336086.app.netsuite.com/core/media/media.nl?id=8773&c=7336086&h=VGlLNDrfFEYdNbk-pQFvvhcuyIrTsO_7akkwCpEcj9vfmpwB"
+                    style="float: left; width: 150px;" />
+            </td>
+            <td>
+                <h1 style="font-size:20px">Expense Request Form</h1>
+            </td>
+        </tr>
+    </table>
+</head>
+
+<body class="content">
+
+    <form method="post" class="form-horizontal"
+        action="https://7336086.extforms.netsuite.com/app/site/hosting/scriptlet.nl?script=1689&deploy=1&compid=7336086&h=f1906e0ce0d82d2bd8bb">
+
+        <table class="header" style="width: 100%; padding-top:2px">
+            <tbody>
+                <tr>
+                    <td>Employee Email Address:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>
+
+                        <input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="requestedby" placeholder="Requested by:" name="requestedby" required="true"
+                            type="email">
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Request Date:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="requestdate" placeholder="Request Date:" name="requestdate" required="true" type="date">
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Department Requesting Expense:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="department" placeholder="Department Requesting Expense:" name="department"
+                            required="true" type="text"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Amount:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="amount" placeholder="Amount" name="amount" required="true" type="number"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Vendor Name/Expense:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: 75%;"
+                            id="vne" placeholder="Vendor Name/Expense:" name="vne" required="true" type="text">
+
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>Preferred Vendor Quote (If Available):</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="preferredfile" placeholder="Select File" name="preferredfile" required="false"
+                            type="file"></td>
+                </tr>
+
+                <tr></tr>
+                <tr>
+                    <td>What is the Expense?<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: 75%;"
+                            id="wite" placeholder="What is the Expense?" name="wite" required="true" type="text"></td>
+                </tr>
+
+                <tr></tr>
+                <tr>
+                    <td>Describe Why Expense is Needed:<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: 75%;"
+                            id="dwein" placeholder="Describe Why Expense is Needed:" name="dwein" required="true"
+                            type="text"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>List Competing Quotes<span style="color:red;">*</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: 75%;"
+                            id="lcq" placeholder="List Competing Quotes" name="lcq" required="true" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td>Competing Vendor Quote (If Available):</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><input
+                            style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em;width: auto;"
+                            id="competingfile" placeholder="Select File" name="competingfile" required="false"
+                            type="file"></td>
+                </tr>
+
+                <tr></tr>
+
+            </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn btn-inverse" style="direction: rtl;" >Submit</button>
+    </form>
+</body>
+<footer>
+    <p style="text-align: right;">© Chefman</p>
+  </footer>
+</html>
